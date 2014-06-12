@@ -1,0 +1,21 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<h1>Your Songs Rating</h1>
+<% cache ['store', Music.latest] do %>
+	<% @musics.each do |music| %>
+		<% cache ['entry', music] do%>
+			<div class="entry">
+				<%= image_tag(music.picture) %>
+				<h3><%= music.Artist %></h3>
+				<%= sanitize(music.description) %>
+				<div class="rating_line" >
+					<span class="rating"><%= music.ratings%></span>
+					<%= button_to 'Rate', line_items_path(music_id: music) %>
+				</div>
+			</div>
+		<% end %>
+	<% end%>
+<% end%>
+

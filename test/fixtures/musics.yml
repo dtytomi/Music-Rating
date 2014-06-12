@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Artist: MyString
+  Album: MyString
+  description: MyText
+  ratings: 9.99
+  picture: MyString
+
+two:
+  Artist: MyString
+  Album: MyString
+  description: MyText
+  ratings: 9.99
+  picture: MyString

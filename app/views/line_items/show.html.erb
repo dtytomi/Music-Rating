@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Music:</strong>
+  <%= @line_item.music %>
+</p>
+
+<p>
+  <strong>Rate:</strong>
+  <%= @line_item.rate %>
+</p>
+
+<%= link_to 'Edit', edit_line_item_path(@line_item) %> |
+<%= link_to 'Back', line_items_path %>

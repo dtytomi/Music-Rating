@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Artist:</strong>
+  <%= @music.Artist %>
+</p>
+
+<p>
+  <strong>Album:</strong>
+  <%= @music.Album %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @music.description %>
+</p>
+
+<p>
+  <strong>Ratings:</strong>
+  <%= @music.ratings %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= image_tag(@music.picture_url, :width => 100) if @music.picture.present? %>
+</p>
+
+<%= link_to 'Edit', edit_music_path(@music) %> |
+<%= link_to 'Back', musics_path %>

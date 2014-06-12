@@ -1,0 +1,13 @@
+<% if notice %>
+	<p id="notice"><%= notice %></p>
+<% end %>
+
+# <%= link_to 'Edit', edit_rate_path(@rate) %> |
+# <%= link_to 'Back', rates_path %>
+
+<h2>Your Songs List</h2>
+<ul>
+	<% @rate.line_items.each do |item| %>
+		<li><%= item.product.Artist %></li>
+	<% end %>
+</ul>
